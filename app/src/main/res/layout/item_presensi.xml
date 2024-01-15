@@ -1,0 +1,27 @@
+ <!-- res/layout/item_presensi.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/waktuTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Waktu"
+        android:textStyle="bold"
+        android:gravity="start" />
+
+    <TextView
+        android:id="@+id/telatTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Status Telat"
+        android:gravity="end"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark" />
+</LinearLayout>
+

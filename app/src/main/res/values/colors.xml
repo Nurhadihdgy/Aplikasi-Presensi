@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorGreen">#00FF00</color>
+    <color name="textColor">#000000</color>
+
+    <!-- Warna Utama Aplikasi -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Warna Teks -->
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+
+    <!-- Warna Latar -->
+    <color name="background">#F5F5F5</color>
+
+    <!-- Warna Status Bar dan Navigasi Bar -->
+    <color name="statusBarColor">#303F9F</color>
+    <color name="navigationBarColor">#303F9F</color>
+
+    <!-- Warna untuk State (Contoh: Pressed, Focused) -->
+    <color name="colorControlNormal">#757575</color>
+    <color name="colorControlHighlight">#FF4081</color>
+
+    <!-- Warna untuk State CheckBox/RadioButton (Contoh: Checked) -->
+    <color name="colorControlActivated">#FF4081</color>
+
+    <!-- Warna Link Teks -->
+    <color name="colorLink">#0066FF</color>
+
+    <!-- Warna untuk Mode Gelap -->
+    <color name="colorDarkBackground">#121212</color>
+    <color name="colorDarkText">#FFFFFF</color>
+</resources>

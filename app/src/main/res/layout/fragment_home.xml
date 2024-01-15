@@ -1,0 +1,254 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_header_homepage"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iv_student_image"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                app:srcCompat="@drawable/il_men_student"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/iv_student_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/nisnTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NISN: "
+                    android:textSize="16sp"
+                    android:textColor="#060755"/>
+
+                <TextView
+                    android:id="@+id/namaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama: "
+                    android:textSize="16sp"
+                    android:textColor="#060755"
+                    android:textStyle="bold"
+                    tools:text="Hi. Syafarina Rahma"/>
+
+                <TextView
+                    android:id="@+id/kelasTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas: "
+                    android:textSize="16sp"
+                    android:textColor="#060755"
+                    android:textStyle="italic"
+                    tools:text="Kelas XII - RPL"/>
+
+                <TextView
+                    android:id="@+id/noAbsenTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Absen: "
+                    android:textSize="16sp"
+                    android:textColor="#060755"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_attedance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_corner_white"
+            android:layout_margin="16dp"
+            android:paddingVertical="16dp"
+            android:layout_below="@id/userInfoLayout">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/bg_circle_progress_bar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:progress="95"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_progress_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="95%"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/progress_bar"
+                app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+                app:layout_constraintTop_toTopOf="@id/progress_bar"
+                app:layout_constraintEnd_toEndOf="@id/progress_bar" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/absensi"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/progress_bar"
+                app:layout_constraintTop_toTopOf="@id/progress_bar"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/tv_attedance_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Persentase Kehadiran"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/absensi_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Total Absensi : "
+                        android:textStyle="bold"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total_absensi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="24dp"
+                        android:text="Tepat Waktu : "
+                        android:textStyle="bold"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tepat_waktu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="2"
+                        android:textStyle="bold"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="24dp"
+                        android:text="Terlambat : "
+                        android:textStyle="bold"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/tv_terlambat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:textStyle="bold"
+                        android:textSize="8sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/datetextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_attedance"
+            android:background="@drawable/bg_corner_white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <!-- Tampilan untuk menampilkan tanggal -->
+            <TextView
+                android:id="@+id/tanggalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today : "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#060755"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Tampilan untuk menampilkan waktu -->
+            <TextView
+                android:id="@+id/waktuTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#060755"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datetextview"
+            android:layout_marginTop="8dp"
+            android:scrollY="@android:dimen/app_icon_size">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Isi item presensi -->
+                <!-- RecyclerView disini -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</ScrollView>
+
+
+
